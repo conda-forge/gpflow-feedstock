@@ -26,6 +26,7 @@ requirements:
     - tensorflow
     - multipledispatch >=0.4.9
     - pytest >=3.5.0
+    - h5py >=2.7.0
 
 test:
   imports:
