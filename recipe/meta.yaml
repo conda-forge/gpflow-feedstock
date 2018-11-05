@@ -12,14 +12,14 @@ source:
 build:
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
+  skip: true  # [python < 3.5]
 
 requirements:
-  build:
-    - python >=3.5
+  host:
+    - python
     - pip
-
   run:
-    - python >=3.5
+    - python
     - numpy >=1.10.0
     - scipy >=0.18.0
     - pandas >=0.18.1
