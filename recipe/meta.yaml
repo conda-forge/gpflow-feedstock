@@ -30,8 +30,8 @@ requirements:
 
 test:
   imports:
-    # Skip the import test on Linux, see tensorflow recipe
-    - gpflow  # [not linux]
+    # Skip the import test, see tensorflow recipe
+    - gpflow  # [not unix]
 
 about:
   home: https://github.com/GPflow/GPflow/
