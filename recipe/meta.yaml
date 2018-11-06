@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: gpflow
@@ -6,31 +6,32 @@ package:
 
 source:
   fn: GPflow-{{ version }}.tar.gz
-  url: https://github.com/GPflow/GPflow/archive/{{ version }}.tar.gz
-  sha256: e92737e9488360aca754c24da434118c625aa9737bc22d2a58e41caf7c3f9122
+  url: https://github.com/GPflow/GPflow/archive/v{{ version }}.tar.gz
+  sha256: c3603a93de848107cbc8ef1b8e768a6ea181da37eda5ffc0f69079dbd1021ed9
 
 build:
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
+  skip: true  # [py2k]
 
 requirements:
-  build:
-    - python >=3.5
+  host:
+    - python
     - pip
-
   run:
-    - python >=3.5
+    - python
     - numpy >=1.10.0
     - scipy >=0.18.0
     - pandas >=0.18.1
     - tensorflow
     - multipledispatch >=0.4.9
     - pytest >=3.5.0
+    - h5py >=2.7.0
 
 test:
   imports:
-    # Skip the import test on Linux, see tensorflow recipe
-    - gpflow  # [not linux]
+    # Skip the import test, see tensorflow recipe
+    - gpflow  # [not unix]
 
 about:
   home: https://github.com/GPflow/GPflow/
