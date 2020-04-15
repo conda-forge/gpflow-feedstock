@@ -1,4 +1,4 @@
-{% set version = "1.3.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: gpflow
@@ -7,11 +7,11 @@ package:
 source:
   fn: GPflow-{{ version }}.tar.gz
   url: https://github.com/GPflow/GPflow/archive/v{{ version }}.tar.gz
-  sha256: c3603a93de848107cbc8ef1b8e768a6ea181da37eda5ffc0f69079dbd1021ed9
+  sha256: ade68068a19f5226e03c2a009e57f8fdc83d21f3b0de969bec90e05e829c89bc
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py2k]
 
 requirements:
