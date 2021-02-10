@@ -23,6 +23,8 @@ requirements:
     - numpy
     - scipy
     - pandas >=0.18.1
+    # conda-forge.yml sets flexible channel priority
+    # to get tensorflow from defaults
     - tensorflow >=2.1.0,<3
     - tensorflow-probability >0.10.0,<1
     - multipledispatch >=0.6
