@@ -11,27 +11,28 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py2k]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
-    - numpy >=1.10.0
-    - scipy >=0.18.0
+    - python >=3.7
+    - numpy
+    - scipy
     - pandas >=0.18.1
-    - tensorflow
-    - multipledispatch >=0.4.9
-    - pytest >=3.5.0
-    - h5py >=2.7.0
+    - tensorflow >=2.1.0,<3
+    - tensorflow-probability >0.10.0,<1
+    - multipledispatch >=0.6
+    - tabulate
+    - typing_extensions
+    - packaging
 
 test:
   imports:
-    # Skip the import test, see tensorflow recipe
-    - gpflow  # [not unix]
+    - gpflow
 
 about:
   home: https://github.com/GPflow/GPflow/
