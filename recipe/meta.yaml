@@ -29,6 +29,7 @@ requirements:
     - typing_extensions
     - packaging
     - deprecated
+    - lark-parser
 
 test:
   imports:
