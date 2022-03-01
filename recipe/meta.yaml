@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.4.0" %}
 
 package:
   name: gpflow
@@ -7,10 +7,10 @@ package:
 source:
   fn: GPflow-{{ version }}.tar.gz
   url: https://github.com/GPflow/GPflow/archive/v{{ version }}.tar.gz
-  sha256: b1879a699c7cb2fc939427ec4b9eaff67f4129a118717edff649f18c04637220
+  sha256: 7ba9f48b446f2010ad82bdae83150895da17f5106c891a49c3905826b5902cf7
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -29,6 +29,7 @@ requirements:
     - typing_extensions
     - packaging
     - deprecated
+    - lark
 
 test:
   imports:
