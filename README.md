@@ -185,5 +185,4 @@ Feedstock Maintainers
 =====================
 
 * [@cxhernandez](https://github.com/cxhernandez/)
-* [@jschueller](https://github.com/jschueller/)
 
