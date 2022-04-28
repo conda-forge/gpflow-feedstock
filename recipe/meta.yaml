@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "2.5.1" %}
 
 package:
   name: gpflow
@@ -7,7 +7,7 @@ package:
 source:
   fn: GPflow-{{ version }}.tar.gz
   url: https://github.com/GPflow/GPflow/archive/v{{ version }}.tar.gz
-  sha256: 7ba9f48b446f2010ad82bdae83150895da17f5106c891a49c3905826b5902cf7
+  sha256: a97934043d3480a6ee3dbdf0e188f0741ba7d8164d68c9ff8b19c5b6f757a8de
 
 build:
   number: 0
