@@ -1,3 +1,4 @@
+{% set name = "gpflow" %}
 {% set version = "2.5.2" %}
 
 package:
@@ -5,35 +6,39 @@ package:
   version: {{ version }}
 
 source:
-  fn: GPflow-{{ version }}.tar.gz
-  url: https://github.com/GPflow/GPflow/archive/v{{ version }}.tar.gz
-  sha256: ac97fbeb3088a9cb19a04d26ab3affe0eb7f4f19bec761d90c2c25ea51c21b94
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
+  sha256: 87f783916b93e8857f2bf50ca7d3a34e039a6c35583738ce9d11136238f4acc1
 
 build:
   number: 0
-  skip: true  # [win]
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
     - pip
+    - python >=3.7
   run:
-    - python
-    - numpy
-    - scipy
-    - tensorflow-base >=2,<3
-    - tensorflow-probability >=0.12.0,<0.13.0
-    - multipledispatch >=0.6
-    - tabulate
-    - typing_extensions
-    - packaging
     - deprecated
-    - lark
+    - lark >=1.1.0
+    - multipledispatch >=0.6
+    - numpy
+    - packaging
+    - python >=3.7
+    - scipy
+    - setuptools >=41.0.0
+    - tabulate
+    - tensorflow >=2.4.0
+    - tensorflow-probability >=0.12.0
+    - typing-extensions
 
 test:
   imports:
     - gpflow
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/GPflow/GPflow/
