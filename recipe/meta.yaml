@@ -19,7 +19,6 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - check-shapes >=1.0.0
     - deprecated
     - lark >=1.1.0
     - multipledispatch >=0.6
