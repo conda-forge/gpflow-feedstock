@@ -1,5 +1,5 @@
 {% set name = "gpflow" %}
-{% set version = "2.5.2" %}
+{% set version = "2.9.1" %}
 
 package:
   name: gpflow
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
-  sha256: 87f783916b93e8857f2bf50ca7d3a34e039a6c35583738ce9d11136238f4acc1
+  sha256: bb1f92eac890ba79bfddc94bb4b4e8ee92c636ae07b1a5e0e6dfce92ee6d5634
 
 build:
   number: 0
@@ -19,6 +19,7 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - check_shapes>=1.0.0
     - deprecated
     - lark >=1.1.0
     - multipledispatch >=0.6
