@@ -1,5 +1,5 @@
 {% set name = "gpflow" %}
-{% set version = "2.5.2" %}
+{% set version = "2.6.4" %}
 
 package:
   name: gpflow
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
-  sha256: 87f783916b93e8857f2bf50ca7d3a34e039a6c35583738ce9d11136238f4acc1
+  sha256: 7a66dec8e3c0a2f9ea3244be5263f7bc86d8dc8935a67b8ddcd0db96fdc152a7
 
 build:
   number: 0
@@ -49,4 +49,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - westinhuang
     - cxhernandez
