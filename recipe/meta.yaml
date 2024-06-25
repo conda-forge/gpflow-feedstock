@@ -1,5 +1,5 @@
 {% set name = "gpflow" %}
-{% set version = "2.9.1" %}
+{% set version = "2.6.4" %}
 
 package:
   name: gpflow
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
-  sha256: bb1f92eac890ba79bfddc94bb4b4e8ee92c636ae07b1a5e0e6dfce92ee6d5634
+  sha256: 7a66dec8e3c0a2f9ea3244be5263f7bc86d8dc8935a67b8ddcd0db96fdc152a7
 
 build:
   number: 0
