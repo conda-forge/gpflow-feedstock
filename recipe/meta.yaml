@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
   sha256: f752fb48a9d7065be935682cac15f36381158aa76c0669e8766d022e72245534
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - check_shapes >=1.0.0
     - deprecated
@@ -25,7 +25,7 @@ requirements:
     - multipledispatch >=0.6
     - numpy
     - packaging
-    - python >=3.7
+    - python >={{ python_min }}
     - scipy
     - setuptools >=41.0.0
     - tabulate
@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/GPflow/GPflow/
