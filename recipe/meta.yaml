@@ -17,6 +17,8 @@ build:
 requirements:
   host:
     - pip
+    - setuptools >=41.0.0
+    - wheel
     - python {{ python_min }}
   run:
     - check_shapes >=1.0.0
