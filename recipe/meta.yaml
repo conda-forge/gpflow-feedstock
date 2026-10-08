@@ -1,16 +1,16 @@
 {% set name = "gpflow" %}
-{% set version = "2.9.2" %}
+{% set version = "2.11.1" %}
 
 package:
   name: gpflow
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
-  sha256: f752fb48a9d7065be935682cac15f36381158aa76c0669e8766d022e72245534
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/gpflow-{{ version }}.tar.gz
+  sha256: 722666a52734e5dba7eaf4b3e2b4483a67026cd7571c65eb83bfda8a9009ef81
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
